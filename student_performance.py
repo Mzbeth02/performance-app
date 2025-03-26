@@ -18,7 +18,7 @@ else:
     data = pd.DataFrame() 
 
 
-st.image('Perf.jpg', width = 200)
+st.image("https://github.com/Mzbeth02/performance-app/blob/main/Perf.jpg", width = 200)
 # title
 st.title('Academic Performance Prediction')
 st.sidebar.title("Welcome to Oleey's Academic Performance Prediction")
