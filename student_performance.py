@@ -90,9 +90,9 @@ elif st.session_state.page == 'Performance Prediction':
     Date = st.date_input('Date of Prediction')
     Time = st.time_input('Time of Prediction')
     pred = st.button("Predict Performance")
-    scaler = joblib.load(r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\scaler.joblib")
+    scaler = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/scaler.joblib")
     # load the model using the path by dragging the file into the command line opened by using "windows+r"
-    loaded_model = joblib.load(r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\model_joblib") 
+    loaded_model = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/model_joblib") 
     # Create a function for prediction
     input_data = (math_score,history_score,physics_score,chemistry_score,biology_score,english_score,geography_score )
     features = ['math_score', 'history_score', 'physics_score', 'chemistry_score', 'biology_score', 'english_score', 'geography_score']
