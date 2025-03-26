@@ -138,9 +138,9 @@ elif st.session_state.page == 'Performance Prediction':
         "PredictedGrade": i
         }
 
-        pd.DataFrame([record]).to_csv(
-                        file_path, mode='a', header=not os.path.exists(file_path), index=False
-                        )
+        #pd.DataFrame([record]).to_csv(
+                        #file_path, mode='a', header=not os.path.exists(file_path), index=False
+                        #)
 
         #st.success("Record saved successfully!")
 
