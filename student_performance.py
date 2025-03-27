@@ -6,6 +6,15 @@ import joblib
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
+#loading models
+def load_scaler(): 
+ scaler = joblib.load('scaler.joblib')
+ return scaler
+
+def load_model():
+ loaded_model = joblib.load('model_joblib')
+ return loaded_model
+
  # Set up file path
 file_path=r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\student_performance_record.csv"
              
@@ -90,9 +99,11 @@ elif st.session_state.page == 'Performance Prediction':
     Date = st.date_input('Date of Prediction')
     Time = st.time_input('Time of Prediction')
     pred = st.button("Predict Performance")
-    scaler = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/scaler.joblib")
-    # load the model using the path by dragging the file into the command line opened by using "windows+r"
-    loaded_model = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/model_joblib") 
+    #scaler = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/scaler.joblib")
+    scaler = load_scaler()    
+ # load the model using the path by dragging the file into the command line opened by using "windows+r"
+    #loaded_model = joblib.load("https://raw.githubusercontent.com/Mzbeth02/performance/main/model_joblib") 
+    loaded_model = load_model()
     # Create a function for prediction
     input_data = (math_score,history_score,physics_score,chemistry_score,biology_score,english_score,geography_score )
     features = ['math_score', 'history_score', 'physics_score', 'chemistry_score', 'biology_score', 'english_score', 'geography_score']
