@@ -16,7 +16,8 @@ def load_model():
  return loaded_model
 
  # Set up file path
-file_path=r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\student_performance_record.csv"
+file_path = "https://raw.githubusercontent.com/Mzbeth02/performance-app/refs/heads/main/student_performance_record.csv"
+#file_path=r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\student_performance_record.csv"
              
 # Check if file already exists to determine if headers should be written
 file_exists = os.path.isfile(file_path)
@@ -149,9 +150,9 @@ elif st.session_state.page == 'Performance Prediction':
         "PredictedGrade": i
         }
 
-        #pd.DataFrame([record]).to_csv(
-                        #file_path, mode='a', header=not os.path.exists(file_path), index=False
-                        #)
+        pd.DataFrame([record]).to_csv(
+                        file_path, mode='a', header=not os.path.exists(file_path), index=False
+                        )
 
         #st.success("Record saved successfully!")
 
