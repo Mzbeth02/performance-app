@@ -68,7 +68,7 @@ if st.session_state.page == 'Personal Details':
     name = st.text_input('Enter your name')
     gender = st.radio('Gender', ['Female', 'Male'])
     class_level = st.selectbox('What class are you?', ['SS1','SS2', 'SS3', 'Other'])
-    subject_specialization = st.radio('What is your subject specialization?', ['Science Class','Art Class', 'Commercial', 'Other'])
+    #subject_specialization = st.radio('What is your subject specialization?', ['Science Class','Art Class', 'Commercial', 'Other'])
 
     # Save inputs into session state
     st.session_state.form_data['status'] = status
@@ -136,7 +136,7 @@ elif st.session_state.page == 'Performance Prediction':
         "Name": st.session_state.form_data.get('name'),
         "Gender": st.session_state.form_data.get('gender'),
         "Class Level": st.session_state.form_data.get('class_level'),
-        "Subject Specialization": st.session_state.form_data.get('subject_specialization'),
+        #"Subject Specialization": st.session_state.form_data.get('subject_specialization'),
         "Math Score": math_score,
         "History Score": history_score,
         "Physics Score": physics_score,
