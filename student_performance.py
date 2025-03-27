@@ -16,7 +16,7 @@ def load_model():
  return loaded_model
 
  # Set up file path
-#file_path=r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\student_performance_record.csv"
+file_path=r"C:\Users\Adedamola.Ayeni\OneDrive - Avon Healthcare Ltd\Documents\Adedamola Ayeni's Credentials\Python\Streamlit\student_performance_record.csv"
              
 # Check if file already exists to determine if headers should be written
 file_exists = os.path.isfile(file_path)
@@ -75,7 +75,7 @@ if st.session_state.page == 'Personal Details':
     st.session_state.form_data['name'] = name
     st.session_state.form_data['gender'] = gender
     st.session_state.form_data['class_level'] = class_level
-    st.session_state.form_data['subject_specialization'] = subject_specialization
+    #st.session_state.form_data['subject_specialization'] = subject_specialization
 
     # NEXT button
     if st.button("Next"):
